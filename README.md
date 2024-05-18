@@ -3,10 +3,13 @@ install az cli
 install az install bicep
 install [terraform]
 
-# create and delete ResourceGroup
+# create and delete ResourceGroup using Azure CLI
 az group create --n MyResourceGroup -l eastus 
 az group delete --name MyResourceGroup
 
+# create and delete ResourceGroup using Terraform
+
+terraform init->plan->apply->destroy
 
 # create static webSite using Terraform
 cd terraformInfra
