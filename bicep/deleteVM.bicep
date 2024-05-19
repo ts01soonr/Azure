@@ -1,4 +1,6 @@
 //az deployment group create -g bicep -f .\deleteVM.bicep --mode Complete
+//az deployment group create -g exampleGroup -f .\deleteVM.bicep --mode Complete
+
 param location string = resourceGroup().location
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {

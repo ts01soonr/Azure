@@ -1,7 +1,7 @@
 //-------------
 //az deployment group create -f ./main.bicep -g rg-start-es1
 //--delete storageaccount
-//az storage account delete -g rg-start-es1 -n fangdemostorage3
+//az storage account delete -g rg-start-es1 -n fangdemostorage4mode
 //--mode Complete 
 //az deployment group create -g exampleGroup --mode Complete -f .\createstorage.bicep
 
