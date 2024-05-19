@@ -30,6 +30,13 @@ az deployment group create -g bicep -f .\createVM.bicep --parameters=parameters.
 
 az deployment group create -g bicep -f .\deleteVM.bicep --mode Complete
 
+# Hints : save cost during using VM on azure
+1. stop vm and then deallocate it
+2. remove Public IP or reduce public IP usage
+3. setup remote control via HBsys then remove public IP 
+
+
+
 
 
 
