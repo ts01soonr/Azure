@@ -1,7 +1,7 @@
 // az deployment group create -g bicep -f .\createVM.bicep --mode Complete --parameters=parameters.json
 // Parameters 'Password1234!'
 
-
+param rgName string ='bicep'
 param vmName string = 'myVM'
 param location string = resourceGroup().location
 param adminUsername string = 'adminUser'

@@ -1,0 +1,42 @@
+#Full-Integeration-with-Soonr.jar
+#Get-PulicIP via Azure CLI
+az vm list-ip-addresses -n myVM -g bicep
+#ssh to myVM
+ssh {{IP}} {{UN}} {{PWD}}
+#Install Java and HBsys -> You can also do it via Ansible
+##############################################
+sudo apt update
+sudo apt install openjdk-8-jdk -y
+git clone https://github.com/ts01soonr/HBsys.git
+cp HBsys/*.* ./
+sudo sh install.sh
+exit
+##############################################
+
+#double check vmStatus
+New create VM should be listed here.
+https://demo.italle.dk
+
+#remember to deallocate after stop
+run az vm deallocate -g bicep -n myVM
+
+#########################################################
+#Top 10+ Azure CLI command/resource for QA automation task
+
+[Azure] - [b, c, d, da, hb , i, ip , ps, rip, r, rs, s, sh, x, xd]
+  //fx az b|bicep script    - Run Deployment using bicep 
+  //fx az c|create          - Create a new VM
+  //fx az x|stop            - Stop VM
+  //fx az s|start           - Start VM
+  //fx az rs|restart        - Restart VM
+  //fx az d|delete          - Delete VM
+  //fx az da|deallocate     - Deallocate VM
+  //fx az xd                - Stop&Deallocate VM
+  //fx az i|info            - Get-instance-view
+  //fx az ip                - Return VM IP info
+  //fx az rip               - Remove Public IP
+  //fx az hb|setup          - Setup HearBeat Sys
+  //fx az sh|shell scripts  - Invoke Shell commands
+  //fx az ps|powershell     - Invoke Powershell commands
+  //fx az vm --help         - Display Help from Azure CLI 
+
